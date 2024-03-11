@@ -1,0 +1,62 @@
+#errors{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#errors img{
+    width: 48px;
+    height: 48px;
+}
+#board {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5f6270;
+    .number.light{
+        background-color: #434650;
+    }
+}
+
+#digits {
+    width: fit-content;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.number {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #5f6270;
+    background-color: #292a30;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#digits .number{
+    background-color: #41434d;
+}
+.active {
+    transition: .4s ease-in-out;
+    background-color: #e33d5b !important;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+}
+
+
+input.cell {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+}
