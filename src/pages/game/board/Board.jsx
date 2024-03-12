@@ -1,17 +1,21 @@
 import React from 'react'
 
-const Board = () => {
+const Board = ({board}) => {
   return (
     <div id="board">
-        <div id="row-0"></div>
-        <div id="row-1"></div>
-        <div id="row-2"></div>
-        <div id="row-3"></div>
-        <div id="row-4"></div>
-        <div id="row-5"></div>
-        <div id="row-6"></div>
-        <div id="row-7"></div>
-        <div id="row-8"></div>
+      {board.map((row,indexI)=>(
+        <div key={indexI} id={`row-${indexI}`}>
+          {row.map((cell,indexJ)=>(
+            <span 
+              key={indexJ} 
+              className={`number ${Math.floor(indexI / 3) % 2 === 1 && Math.floor(indexJ / 3) % 2 === 1 || Math.floor(indexI / 3) % 2 === 0 && Math.floor(indexJ / 3) % 2 === 0 ? "light" : ""}`} 
+              data-order={indexI * 9 + indexJ}
+            >
+              {cell === 0 ? "" : cell}
+            </span>
+          ))}
+        </div>
+      ))}
     </div>
   )
 }
