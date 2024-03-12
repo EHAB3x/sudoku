@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 const Digits = () => {
   const[active,setActive] = useState(null);
   const digits = Array.from({ length: 9 }, (_, index) => index + 1);
-  console.log(active);
 
   return (
     <div id="digits" style={{ marginTop: "20px" }}>

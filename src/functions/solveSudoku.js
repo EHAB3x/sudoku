@@ -1,6 +1,6 @@
 import isValid from "./isValid"
 
-export let solvedArray = []
+// export let solvedArray = []
 // Function to solve the Sudoku puzzle using backtracking
 export default function solveSudoku(board) {
     for (let row = 0; row < 9; row++) {
@@ -15,8 +15,8 @@ export default function solveSudoku(board) {
                         board[row][col] = num;
                         // Recursively try to solve the puzzle with the current number placed
                         if (solveSudoku(board)) {
-                            solvedArray = board.map(row => [...row]);
-                            return true; // If the puzzle is solved, return true
+                            // solvedArray = board.map(row => [...row]);
+                            return board; // If the puzzle is solved, return true
                         }
                         // If the current number doesn't lead to a solution, backtrack and try the next number
                         board[row][col] = 0;

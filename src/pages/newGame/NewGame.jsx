@@ -7,8 +7,8 @@ const NewGame = () => {
     }
   return (
     <div className="newGame">
-        <Link className="link" to="/game" onClick={()=> saveDifficulty(.2)}>Easy</Link>
-        <Link className="link" to="/game" onClick={()=> saveDifficulty(.5)}>Medium</Link>
+        <Link className="link" to="/game" onClick={()=> saveDifficulty(.5)}>Easy</Link>
+        <Link className="link" to="/game" onClick={()=> saveDifficulty(.7)}>Medium</Link>
         <Link className="link" to="/game" onClick={()=> saveDifficulty(1)}>Hard</Link>
     </div>
   )
