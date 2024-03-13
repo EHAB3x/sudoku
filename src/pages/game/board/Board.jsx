@@ -4,7 +4,7 @@ import Digits from '../digits/Digits';
 import generateAndSolveSudoku from '../../../functions/generateAndSolveSudoku';
 import { useNavigate } from 'react-router-dom';
 
-const Board = ({board, solved, updateBoard}) => {
+const Board = ({board, solved, updateBoard, mistakesSetter}) => {
   const navigate = useNavigate();
   const getDifficultyLevel = window.localStorage.getItem("difficulty");
   const checkAnswer = (cell,i,j)=>{
@@ -49,6 +49,7 @@ const Board = ({board, solved, updateBoard}) => {
       }else{
         let errors = document.querySelector("#errors");
         let heartSpan = document.querySelectorAll("#errors span");
+        mistakesSetter(heartSpan.length - 1)
         errors.removeChild(heartSpan[heartSpan.length - 1]);
         const Toast = Swal.mixin({
           toast: true,

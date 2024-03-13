@@ -9,10 +9,15 @@ import copyBoard from '../../functions/copyBoard'
 const Game = () => {
     const [solvedPuzzle , setSolvedPuzzle] = useState([]);
     const [puzzle , setPuzzle] = useState([]);
+    const [mistakes, setMistakes] = useState(3);
 
     const updateBoard = (board)=>{
       setPuzzle(board);
       console.log("Updated");
+    }
+
+    const mistakesSetter = (val)=>{
+      setMistakes(val);
     }
 
     useEffect(()=>{
@@ -26,8 +31,8 @@ const Game = () => {
   return (
     <div className="game">
         <h1>Sudoku Game</h1>
-        <Errors />
-        <Board board={puzzle} solved={solvedPuzzle} updateBoard={updateBoard}/>
+        <Errors mistakes={mistakes}/>
+        <Board board={puzzle} solved={solvedPuzzle} updateBoard={updateBoard} mistakesSetter={mistakesSetter}/>
         <Digits/>
     </div>
   )
