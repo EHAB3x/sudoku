@@ -6,6 +6,8 @@ import Digits from './digits/Digits'
 import generateAndSolveSudoku from "../../functions/generateAndSolveSudoku"
 import solveSudoku from '../../functions/solveSudoku'
 import copyBoard from '../../functions/copyBoard'
+import { IoChevronBack } from "react-icons/io5";
+import { Link } from 'react-router-dom'
 const Game = () => {
     const [solvedPuzzle , setSolvedPuzzle] = useState([]);
     const [puzzle , setPuzzle] = useState([]);
@@ -29,6 +31,11 @@ const Game = () => {
     },[])
   return (
     <div className="game">
+        <div className="back">
+          <Link to="/newGame">
+            <IoChevronBack />
+          </Link>
+        </div>
         <h1>Sudoku Game</h1>
         <Errors mistakes={mistakes}/>
         <Board board={puzzle} solved={solvedPuzzle} updateBoard={updateBoard} mistakesSetter={mistakesSetter}/>
