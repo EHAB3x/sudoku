@@ -13,7 +13,6 @@ const Game = () => {
 
     const updateBoard = (board)=>{
       setPuzzle(board);
-      console.log("Updated");
     }
 
     const mistakesSetter = (val)=>{
