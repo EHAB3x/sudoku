@@ -3,6 +3,15 @@
 <h2>Description</h2>
 <p>This project implements a web-based Sudoku game with three difficulty levels (easy, medium, and hard). It utilizes the Depth-First Search (DFS) algorithm to solve Sudoku puzzles and provide users with the solution upon request.</p>
 
+<h2>How to run project locally?</h2>
+<p>open your terminal and verify if you have Node.js and git installed</p>
+
+<ul>
+  <li>clone the repo first</li>
+  <li>npm i</li>
+  <li>npm start</li>
+</ul>
+
 <h2>How to reach functions and algorithms?</h2>
 <ul>
   <li>
@@ -35,6 +44,7 @@
       <li>react-icons</li>
       <li>react-router</li>
       <li>sweetAlert2</li>
+      <li>netlify for project deployment</li>
     </ul>
   </li>
 </ul>
@@ -44,3 +54,6 @@
   <li>Ihab mahmoud</li>
   <li>Amera mahmoud</li>
 </ul>
+
+<h2>Live Preview:</h2>
+<p>https://eh1am1sudoku.netlify.app/</p>
