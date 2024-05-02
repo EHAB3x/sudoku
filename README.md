@@ -4,8 +4,10 @@
 <ul>
   <li>
     src
-    <li>
-      functions
-    </li>
+    <ul>
+      <li>
+        functions
+      </li>
+    </ul>
   </li>
 </ul>
